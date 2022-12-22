@@ -21,8 +21,8 @@ namespace Linecomparision
             double y1 = Convert.ToDouble(Console.ReadLine());
             double x2 = Convert.ToDouble(Console.ReadLine());
             double y2= Convert.ToDouble(Console.ReadLine());
-            double length = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            Console.WriteLine("Length of line1 is {0}", length ) ;
+            double length1 = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+            Console.WriteLine("Length of line1 is {0}", length1 ) ;
 
 
             // UC2- Second points
@@ -39,6 +39,14 @@ namespace Linecomparision
             double length2 = Math.Sqrt((x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
             Console.WriteLine("Length of line2 is {0}", length2);
 
+            //Uc3 -comparision between 2 lines
+            if (length2 == length1)
+                Console.WriteLine("Line2 is equal to Line1");
+            else if (length2 > length1)
+                Console.WriteLine("Line2 is greaterthan Line1");
+            else
+                    Console.WriteLine ("Line2 is lessthan Line1");
+            Console.ReadLine();
 
         }
     }
