@@ -13,22 +13,33 @@ namespace Linecomparision
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the line comparision program");
-           //UC1- length between two points 
+           //UC1- length between two points (first points)
             
             Console.WriteLine("Enter the values of x1 y1 & x2 y2");
             double[] points = new double[4];
-            
-
-            for (int i = 0; i < points.Length; i++) 
-            {
-                points[i] = Convert.ToDouble(Console.ReadLine());
-            }
-
-            double x1 = points[0], y1 = points[1], x2 = points[2], y2 = points[3];
-
+            double x1 = Convert.ToDouble(Console.ReadLine());
+            double y1 = Convert.ToDouble(Console.ReadLine());
+            double x2 = Convert.ToDouble(Console.ReadLine());
+            double y2= Convert.ToDouble(Console.ReadLine());
             double length = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            Console.WriteLine("Length between two points is {0}", length ) ;
-            
+            Console.WriteLine("Length of line1 is {0}", length ) ;
+
+
+            // UC2- Second points
+
+            Console.WriteLine("Enter the values of x3 y3 & x4 y4");
+            double[] points2= new double[4];
+            double x3 = Convert.ToDouble(Console.ReadLine());
+            double x4 = Convert.ToDouble(Console.ReadLine());
+            double y3 = Convert.ToDouble(Console.ReadLine());
+            double y4 = Convert.ToDouble(Console.ReadLine());
+
+
+
+            double length2 = Math.Sqrt((x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
+            Console.WriteLine("Length of line2 is {0}", length2);
+
+
         }
     }
 }
